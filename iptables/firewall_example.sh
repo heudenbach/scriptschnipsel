@@ -65,7 +65,7 @@ iptables -A INPUT -p tcp -m multiport --dport 20,21,22,50000:50500 -s 8.8.8.8 -j
 iptables -A INPUT -p tcp -m multiport --dport 20,21,22,50000:50500 -s 9.9.9.9 -j ACCEPT
  
 #same but with a full subnet
-iptables -A INPUT -p tcp -m multiport --dport 20,21,22,50000:50500 -s 7.7.7.0/22 -j ACCEPT
+iptables -A INPUT -p tcp -m multiport --dport 20,21,22,50000:50500 -s 7.7.7.0/24 -j ACCEPT
  
 #drop all other connections to those ports except the ones in the row before
 iptables -A INPUT -p tcp -m multiport --dport 20,21,22,50000:50500 -j DROP
